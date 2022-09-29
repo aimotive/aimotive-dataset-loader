@@ -10,8 +10,8 @@ conda activate aimdataset
 
 ### Clone repository
 ```
-git clone ssh://git@git.aimotive.com:29418/aidata/aimotive-dataset.git
-cd aimotive-dataset
+git clone https://github.com/aimotive/aimotive-dataset-loader.git
+cd aimotive-dataset-loader
 ```
 
 ### Install requirements
