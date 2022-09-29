@@ -1,0 +1,227 @@
+session:
+  appname: "aimprototype"
+  appversion: "1.293.0.6705-Magna_FRS100-931-gdc2ce814*"
+  user:
+  session_start_datetime: "2021-09-01 19:41:36"
+  hostname:
+  vehiclename: "Yoda"
+  description:
+  reconstructionInfo:
+    graphConfigName: "./config/graph-bev-record"
+    graphConfigHash: "eea40bdf92e095840ca8e803354617811b7f44ce"
+    sensorConfigName: "Yoda/sensorconfig.yaml"
+    sensorConfigHash: "19b93c592d512167d8c6e3d6b0b64dfffa11981a"
+    tensorRTVersion: "6200"
+    cudnnVersion: "7606"
+    cudaDriverVersion: "10020"
+    gpuTypes:
+      -  "Graphics Device"
+      -  "Xavier"
+    cpuArchitecture: "aarch64"
+    buildMode: "RelWithDebInfo"
+    cmdLineArguments:
+  session_start: 2593591605440ns
+  vehicle_database_rel_path: "./vehicle_database"
+  camera_first_frame_id: 0
+  camera_start_timestamp_host: 2593591605440ns
+  cameras:
+    - 
+      type: "Camera"
+      vendor: "NvMedia"
+      id: 1
+      name: "TE04912"
+      resolution:
+        size: (1920x1216)
+        sensorSize: (1920x1216)
+        minSize: (1920x1216)
+        maxSize: (1920x1216)
+        step: (1x1)
+        offset: (0x0)
+      fps: 15
+      pixel_format: yuv420_xavier_blocklinear
+      datafile: "Camera_NvMedia_01_TE04912_data.h264"
+      metafile: "Camera_NvMedia_01_TE04912_meta.dat"
+    - 
+      type: "Camera"
+      vendor: "NvMedia"
+      id: 2
+      name: "TE04913"
+      resolution:
+        size: (1280x704)
+        sensorSize: (1280x704)
+        minSize: (1280x704)
+        maxSize: (1280x704)
+        step: (1x1)
+        offset: (0x0)
+      fps: 15
+      pixel_format: yuv420_xavier_blocklinear
+      datafile: "Camera_NvMedia_02_TE04913_data.h264"
+      metafile: "Camera_NvMedia_02_TE04913_meta.dat"
+    - 
+      type: "Camera"
+      vendor: "NvMedia"
+      id: 0
+      name: "TE04914"
+      resolution:
+        size: (1280x704)
+        sensorSize: (1280x704)
+        minSize: (1280x704)
+        maxSize: (1280x704)
+        step: (1x1)
+        offset: (0x0)
+      fps: 15
+      pixel_format: yuv420_xavier_blocklinear
+      datafile: "Camera_NvMedia_00_TE04914_data.h264"
+      metafile: "Camera_NvMedia_00_TE04914_meta.dat"
+    - 
+      type: "Camera"
+      vendor: "NvMedia"
+      id: 3
+      name: "TE04921"
+      resolution:
+        size: (1280x704)
+        sensorSize: (1280x704)
+        minSize: (1280x704)
+        maxSize: (1280x704)
+        step: (1x1)
+        offset: (0x0)
+      fps: 15
+      pixel_format: yuv420_xavier_blocklinear
+      datafile: "Camera_NvMedia_03_TE04921_data.h264"
+      metafile: "Camera_NvMedia_03_TE04921_meta.dat"
+  gpsDevices:
+    - 
+      type: "Gps"
+      vendor: "Ublox"
+      id: 0
+      name:
+      deviceSpecifics:
+        -  "extension0 : ROM BASE 0x118B2060"
+        -  "extension1 : FWVER=LAP 1.01"
+        -  "extension2 : PROTVER=30.00"
+        -  "extension3 : MOD=ZED-F9K"
+        -  "extension4 : GPS;GLO;GAL;BDS"
+        -  "extension5 : QZSS"
+        -  "hwVersion : 00190000"
+        -  "productString : "
+        -  "productionName : ublox-ZED-F9K"
+        -  "swVersion : EXT CORE 1.00 (344bdb)"
+        -  "vendorString : "
+      datafile: "Gps_Ublox_00_data.dat"
+      metafile: "Gps_Ublox_00_meta.dat"
+  imuDevices:
+    - 
+      type: "Imu"
+      vendor: "Continental"
+      id: 0
+      name: "AL30G25008"
+      deviceSpecifics:
+        -  "CanInterfaceId : 0x01"
+        -  "SampleRate : 100"
+        -  "productionName : Continental SC23S"
+      datafile: "Imu_Continental_00_AL30G25008_data.dat"
+      metafile: "Imu_Continental_00_AL30G25008_meta.dat"
+  gnssInsDevices:
+    - 
+      type: "GnssIns"
+      vendor: "Novatel"
+      id: 0
+      name: "DMMU19110216C"
+      deviceSpecifics:
+        -  "bootVersion : OM7BR0100RB0000"
+        -  "enclosureType : PWRPAK7D-E1"
+        -  "gpggaRate : 10.0 Hz"
+        -  "gprmcRate : 10.0 Hz"
+        -  "hwVersion : OEM7720-1.01"
+        -  "imuCardType : Epson G320N 125"
+        -  "imuCorrRate : 1.0 Hz"
+        -  "imuDataRate : 125.0 Hz"
+        -  "insDataRate : 20.0 Hz"
+        -  "insDevRate : 2.0 Hz"
+        -  "model : FDDRZNTBEP1"
+        -  "productionName : Novatel GNSS-INS"
+        -  "swVersion : OM7CR0704RN0000"
+      datafile: "GnssIns_Novatel_00_DMMU19110216C_data.dat"
+      metafile: "GnssIns_Novatel_00_DMMU19110216C_meta.dat"
+  canInterfaces:
+    - 
+  radarDevices:
+    - 
+      type: "Radar"
+      vendor: "Smartmicro"
+      id: 0
+      name: "34357"
+      deviceSpecifics:
+        -  "productionName : Smartmicro"
+      datafile: "Radar_Smartmicro_00_34357_data.dat"
+      metafile: "Radar_Smartmicro_00_34357_meta.dat"
+    - 
+      type: "Radar"
+      vendor: "Smartmicro"
+      id: 1
+      name: "34358"
+      deviceSpecifics:
+        -  "productionName : Smartmicro"
+      datafile: "Radar_Smartmicro_01_34358_data.dat"
+      metafile: "Radar_Smartmicro_01_34358_meta.dat"
+  lidarDevices:
+    - 
+      type: "Lidar"
+      vendor: "Hesai"
+      id: 0
+      name: "PA643CCA53953CCB50"
+      deviceSpecifics:
+        -  "productionName : Pandar64P"
+      datafile: "Lidar_Hesai_00_PA643CCA53953CCB50_data.dat"
+      metafile: "Lidar_Hesai_00_PA643CCA53953CCB50_meta.dat"
+  modules:
+    - 
+      id: "UserInput"
+      type: "UserInputModule"
+      ports:
+        - 
+          id: "TargetSpeed"
+          count: 1
+          datafile: "UserInput.TargetSpeed.ion"
+          metafile: "UserInput.TargetSpeed_meta.dat"
+        - 
+          id: "GpsRoute"
+          count: 1
+          datafile: "UserInput.GpsRoute.ion"
+          metafile: "UserInput.GpsRoute_meta.dat"
+        - 
+          id: "NaviActionMessage"
+          count: 1
+          datafile: "UserInput.NaviActionMessage.ion"
+          metafile: "UserInput.NaviActionMessage_meta.dat"
+    - 
+      id: "keyboardModule"
+      type: "KeyboardModule"
+      ports:
+        - 
+          id: "KeyEvent"
+          count: 32
+          datafile: "keyboardModule.KeyEvent.ion"
+          metafile: "keyboardModule.KeyEvent_meta.dat"
+    - 
+      id: "vehicleDataModule"
+      type: "VehicleDataModule"
+      ports:
+        - 
+          id: "DbwStatData"
+          count: 3200
+          datafile: "vehicleDataModule.DbwStatData.ion"
+          metafile: "vehicleDataModule.DbwStatData_meta.dat"
+        - 
+          id: "DbwInfoData"
+          count: 3200
+          datafile: "vehicleDataModule.DbwInfoData.ion"
+          metafile: "vehicleDataModule.DbwInfoData_meta.dat"
+        - 
+          id: "DbwEventData"
+          count: 3200
+          datafile: "vehicleDataModule.DbwEventData.ion"
+          metafile: "vehicleDataModule.DbwEventData_meta.dat"
+  modified_session: false
+  conv_version:
+  version: 1

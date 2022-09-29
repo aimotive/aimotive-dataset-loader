@@ -1,0 +1,6 @@
+laspy[laszip]
+numpy
+numpy-quaternion
+opencv-python
+scipy
+tqdm

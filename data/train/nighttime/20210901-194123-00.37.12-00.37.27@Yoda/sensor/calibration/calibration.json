@@ -1,0 +1,720 @@
+{
+    "B_LRR_C": {
+        "RT_body_from_sensor": [
+            [
+                -0.9994258600450021,
+                -0.007005732287152391,
+                -0.033149207960818106,
+                -1.11570001
+            ],
+            [
+                0.006977422112343172,
+                -0.9999751873944143,
+                0.0009696268216336673,
+                0.00150000001
+            ],
+            [
+                -0.03315517838852629,
+                0.0007377741035014549,
+                0.9994499436366971,
+                0.550300002
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "RT_sensor_from_body": [
+            [
+                -0.9994258600450011,
+                0.006977422112343165,
+                -0.033155178388526274,
+                -1.0968246134461883
+            ],
+            [
+                -0.007005732287152385,
+                -0.9999751873944134,
+                0.0007377741035014547,
+                -0.0067223298823742665
+            ],
+            [
+                -0.03314920796081809,
+                0.000969626821633667,
+                0.9994499436366974,
+                -0.5869833320757933
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "custom_vars": {
+            "device_port": 55555,
+            "field_of_view_deg": "[120, 0]",
+            "host_ip": "192.168.3.20",
+            "host_port": 55555,
+            "product_name": "Smartmicro radar",
+            "rotate_objects_by_180_degree": true,
+            "serial_number": 34358,
+            "tcp_socket": false
+        },
+        "device_id": 34358,
+        "extrinsic_error": -1,
+        "label": "B_LRR_C",
+        "pos_meter": [
+            -1.11570001,
+            0.00150000001,
+            0.550300002
+        ],
+        "sensor_type": "radar",
+        "uri": "192.168.3.10",
+        "yaw_pitch_roll_deg": [
+            180.4,
+            -1.9,
+            -0.0422945991
+        ]
+    },
+    "B_MIDRANGECAM_C": {
+        "RT_body_from_sensor": [
+            [
+                -0.014652693671725706,
+                0.016260479572616,
+                -0.9997604189865847,
+                0.051899999380111694
+            ],
+            [
+                0.9998853398132785,
+                0.004059941387015049,
+                -0.014588492122870755,
+                0.000699999975040555
+            ],
+            [
+                0.003821752823983932,
+                -0.9998595469764754,
+                -0.01631810422046111,
+                1.3708000183105469
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "RT_sensor_from_body": [
+            [
+                -0.014652693671725702,
+                0.9998853398132781,
+                0.0038217528239839313,
+                -0.005178303761528737
+            ],
+            [
+                0.016260479572615998,
+                0.0040599413870150486,
+                -0.9998595469764755,
+                1.3697607244647187
+            ],
+            [
+                -0.9997604189865844,
+                -0.014588492122870748,
+                -0.016318104220461115,
+                0.07426663463398733
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "custom_vars": {
+            "csi_group_isp_settings_path": "/opt/nvidia/nvmedia/nit/IMX390RGGBE3_200FOV_RGGB.nito",
+            "csi_group_type": "IMX390RGGBE3_200FOV_RGGB_CPHY_x4",
+            "csi_link_id": 8,
+            "misalign_mask_file": "misalign_mask_B_MIDRANGECAM_C.png",
+            "misalign_ref_angle_error": 0.5,
+            "misalign_ref_file": "misalign_ref_B_MIDRANGECAM_C.png",
+            "obstruction_mask_file": "obstruction_masks/B_MIDRANGECAM_C_mask.png"
+        },
+        "device_id": "TE04912",
+        "distortion_coeffs": [
+            -0.33332954637338263,
+            0.10183340652186723,
+            -0.0009741518346123839,
+            0.0013175230899047884,
+            0
+        ],
+        "extrinsic_error": -1,
+        "focal_length_px": [
+            967.5257395504426,
+            972.7561776366236
+        ],
+        "image_resolution_px": [
+            1920,
+            1216
+        ],
+        "label": "B_MIDRANGECAM_C",
+        "model": "opencv_pinhole",
+        "pixel_format": 29,
+        "pos_meter": [
+            0.051899999380111694,
+            0.000699999975040555,
+            1.3708000183105469
+        ],
+        "principal_point_px": [
+            960,
+            608
+        ],
+        "reprojection_error": 0.5658357493940523,
+        "sensor_type": "camera",
+        "transform": "none",
+        "uri": "basler:TE04912",
+        "yaw_pitch_roll_deg": [
+            179.164,
+            -0.935,
+            0.219
+        ]
+    },
+    "F_LRR_C": {
+        "RT_body_from_sensor": [
+            [
+                0.9998153368481835,
+                0.012249229225396667,
+                0.014807045165631702,
+                3.8125999
+            ],
+            [
+                -0.012215656463956892,
+                0.9999226112709751,
+                -0.0023556753148554115,
+                -0.00240000011
+            ],
+            [
+                -0.014834754474137993,
+                0.0021743625314374635,
+                0.999887594786171,
+                0.36559999
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "RT_sensor_from_body": [
+            [
+                0.9998153368481835,
+                -0.012215656463956892,
+                -0.014834754474137991,
+                -3.8065015847753103
+            ],
+            [
+                0.012249229225396665,
+                0.9999226112709749,
+                0.0021743625314374626,
+                -0.045096542662532484
+            ],
+            [
+                0.014807045165631702,
+                -0.0023556753148554115,
+                0.9998875947861708,
+                -0.4220178871937458
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "custom_vars": {
+            "device_port": 55555,
+            "field_of_view_deg": "[120, 0]",
+            "host_ip": "192.168.2.20",
+            "host_port": 55555,
+            "product_name": "Smartmicro radar",
+            "serial_number": 34357,
+            "tcp_socket": false
+        },
+        "device_id": 34357,
+        "extrinsic_error": -1,
+        "label": "F_LRR_C",
+        "pos_meter": [
+            3.8125999,
+            -0.00240000011,
+            0.36559999
+        ],
+        "sensor_type": "radar",
+        "uri": "192.168.2.10",
+        "yaw_pitch_roll_deg": [
+            0.7,
+            -0.85,
+            -0.124595605
+        ]
+    },
+    "F_MIDLONGRANGECAM_CL": {
+        "RT_body_from_sensor": [
+            [
+                -0.022240667233473534,
+                0.00872903857906467,
+                0.9997145375588449,
+                1.9311000108718872
+            ],
+            [
+                -0.9997262833616551,
+                0.007067576380776066,
+                -0.02230263930555249,
+                0.10719999670982361
+            ],
+            [
+                -0.007260239452082491,
+                -0.9999369246355427,
+                0.008569461681536827,
+                1.2488000392913818
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "RT_sensor_from_body": [
+            [
+                -0.022240667233473538,
+                -0.9997262833616549,
+                -0.007260239452082491,
+                0.15918619433647785
+            ],
+            [
+                0.00872903857906467,
+                0.007067576380776066,
+                -0.9999369246355428,
+                1.231106980114071
+            ],
+            [
+                0.999714537558845,
+                -0.022302639305552485,
+                0.008569461681536827,
+                -1.938859455573103
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "custom_vars": {
+            "csi_group_isp_settings_path": "/opt/nvidia/nvmedia/nit/IMX490_RGGB.nito",
+            "csi_group_type": "IMX490_RGGB_CPHY_x4",
+            "csi_link_id": 0,
+            "misalign_mask_file": "misalign_mask_F_MIDLONGRANGECAM_CL.png",
+            "misalign_ref_angle_error": 0.5,
+            "misalign_ref_file": "misalign_ref_F_MIDLONGRANGECAM_CL.png",
+            "obstruction_mask_file": "obstruction_masks/F_MIDLONGRANGECAM_CL_mask.png"
+        },
+        "device_id": "TE04914",
+        "distortion_coeffs": [
+            -0.30073606967926025,
+            0.08419033139944077,
+            0.002034867648035288,
+            0.0006097130244597793,
+            0
+        ],
+        "extrinsic_error": -1,
+        "focal_length_px": [
+            1170.7994384765625,
+            1001.1844482421875
+        ],
+        "image_resolution_px": [
+            1280,
+            704
+        ],
+        "label": "F_MIDLONGRANGECAM_CL",
+        "model": "opencv_pinhole",
+        "pixel_format": 29,
+        "pos_meter": [
+            1.9311000108718872,
+            0.10719999670982361,
+            1.2488000392913818
+        ],
+        "principal_point_px": [
+            640,
+            352
+        ],
+        "reprojection_error": -1,
+        "sensor_type": "camera",
+        "transform": "none",
+        "uri": "basler:TE04914",
+        "yaw_pitch_roll_deg": [
+            1.277999997138977,
+            0.4909999966621399,
+            -0.41600000858306885
+        ]
+    },
+    "Imu0": {
+        "custom_vars": {
+            "bias_acc": "[0.000000, 0.000000, 0.031339]",
+            "bias_gyro": "[0.002768, 0.001923, -0.000782]",
+            "pos_meter": "[1.403858, -0.002877, 0.496091]",
+            "product_name": "Continental SC23S",
+            "yaw_pitch_roll_deg": "[-1.723320, 1.221999, -0.356249]"
+        },
+        "device_id": "AL30G25008",
+        "extrinsic_error": -1,
+        "label": "Imu0",
+        "pos_meter": [
+            0,
+            0,
+            0
+        ],
+        "sensor_type": "imu_ins",
+        "uri": "can:1",
+        "yaw_pitch_roll_deg": [
+            0,
+            0,
+            0
+        ]
+    },
+    "M_FISHEYE_L": {
+        "RT_body_from_sensor": [
+            [
+                0.9993801300280762,
+                -0.0014565246697286205,
+                -0.035174340661230596,
+                1.0571999549865723
+            ],
+            [
+                0.031674079795614096,
+                -0.3988984327632267,
+                0.9164479216017367,
+                0.6378999948501587
+            ],
+            [
+                -0.015365818369579093,
+                -0.9169939579271654,
+                -0.39860503352429594,
+                1.4144999980926514
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "RT_sensor_from_body": [
+            [
+                0.9993801300280758,
+                0.03167407979561412,
+                -0.015365818369579167,
+                -1.0550145737642007
+            ],
+            [
+                -0.0014565246697285663,
+                -0.39889843276322656,
+                -0.9169939579271656,
+                1.553085097759621
+            ],
+            [
+                -0.03517434066123051,
+                0.9164479216017363,
+                -0.3986050335242959,
+                0.016411006053386842
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "custom_vars": {
+            "csi_group_isp_settings_path": "/opt/nvidia/nvmedia/nit/IMX390RGGBE3_200FOV_RGGB.nito",
+            "csi_group_type": "IMX390RGGBE3_200FOV_RGGB_CPHY_x4",
+            "csi_link_id": 5,
+            "misalign_mask_file": "misalign_mask_M_FISHEYE_L.png",
+            "misalign_ref_angle_error": 0.9,
+            "misalign_ref_file": "misalign_ref_M_FISHEYE_L.png",
+            "obstruction_mask_file": "obstruction_masks/M_FISHEYE_L_mask.png"
+        },
+        "device_id": "TE04913",
+        "distortion_coeffs": [
+            0.03364013761086061,
+            -0.08420780755924384,
+            0,
+            0,
+            0
+        ],
+        "extrinsic_error": -1,
+        "focal_length_px": [
+            575.2252458162137,
+            501.2711423954533
+        ],
+        "image_resolution_px": [
+            1280,
+            704
+        ],
+        "label": "M_FISHEYE_L",
+        "model": "mei",
+        "pixel_format": 29,
+        "pos_meter": [
+            1.0571999549865723,
+            0.6378999948501587,
+            1.4144999980926514
+        ],
+        "principal_point_px": [
+            641.9449779750069,
+            344.73654890450604
+        ],
+        "reprojection_error": 0.35321057183345467,
+        "sensor_type": "camera",
+        "transform": "none",
+        "uri": "basler:TE04913",
+        "xi": 1.0222136193840399,
+        "yaw_pitch_roll_deg": [
+            -92.198,
+            -23.491001310533154,
+            -0.9599999498748056
+        ]
+    },
+    "M_FISHEYE_R": {
+        "RT_body_from_sensor": [
+            [
+                -0.9982583215955351,
+                0.026526038194538276,
+                -0.05269433236095944,
+                1.0563000440597534
+            ],
+            [
+                0.05890750779775722,
+                0.3997705878809073,
+                -0.9147203849212123,
+                -0.6377999782562256
+            ],
+            [
+                -0.003198263641810195,
+                -0.9162313279751221,
+                -0.4006368988830432,
+                1.4144999980926514
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "RT_sensor_from_body": [
+            [
+                -0.9982583215955351,
+                0.05890750779775729,
+                -0.003198263641810158,
+                1.0965554601921574
+            ],
+            [
+                0.026526038194538273,
+                0.39977058788090725,
+                -0.916231327975122,
+                1.522963428617537
+            ],
+            [
+                -0.05269433236095936,
+                -0.9147203849212124,
+                -0.4006368988830432,
+                0.0389532766872155
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "custom_vars": {
+            "csi_group_isp_settings_path": "/opt/nvidia/nvmedia/nit/IMX390RGGBE3_200FOV_RGGB.nito",
+            "csi_group_type": "IMX390RGGBE3_200FOV_RGGB_CPHY_x4",
+            "csi_link_id": 4,
+            "misalign_mask_file": "misalign_mask_M_FISHEYE_R.png",
+            "misalign_ref_angle_error": 0.9,
+            "misalign_ref_file": "misalign_ref_M_FISHEYE_R.png",
+            "obstruction_mask_file": "obstruction_masks/M_FISHEYE_R_mask.png"
+        },
+        "device_id": "TE04921",
+        "distortion_coeffs": [
+            0.02733074511706634,
+            -0.0807192774510606,
+            0,
+            0,
+            0
+        ],
+        "extrinsic_error": -1,
+        "focal_length_px": [
+            576.1085340109695,
+            502.9599814445614
+        ],
+        "image_resolution_px": [
+            1280,
+            704
+        ],
+        "label": "M_FISHEYE_R",
+        "model": "mei",
+        "pixel_format": 29,
+        "pos_meter": [
+            1.0563000440597534,
+            -0.6377999782562256,
+            1.4144999980926514
+        ],
+        "principal_point_px": [
+            643.6406150730598,
+            344.8738331121544
+        ],
+        "reprojection_error": 0.28215481773616236,
+        "sensor_type": "camera",
+        "transform": "none",
+        "uri": "basler:TE04921",
+        "xi": 1.017479743852224,
+        "yaw_pitch_roll_deg": [
+            93.29699628854586,
+            -23.61800014041308,
+            -0.19999999845072666
+        ]
+    },
+    "M_LIDAR_M": {
+        "RT_body_from_sensor": [
+            [
+                0.02322686628798997,
+                -0.9997241315964318,
+                0.003489038005054312,
+                1.1574000120162964
+            ],
+            [
+                0.9997199212541452,
+                0.023210644425240706,
+                -0.004620068502897742,
+                0.0013000000035390258
+            ],
+            [
+                0.004537811151454005,
+                0.003595370513023775,
+                0.999983240649976,
+                1.6822999715805054
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "RT_sensor_from_body": [
+            [
+                0.023226866287989954,
+                0.9997199212541444,
+                0.004537811151454003,
+                -0.035816370793117676
+            ],
+            [
+                -0.9997241315964314,
+                0.023210644425240692,
+                0.003595370513023775,
+                1.1510020563729748
+            ],
+            [
+                0.003489038005054311,
+                -0.004620068502897741,
+                0.9999832406499761,
+                -1.6863039838663416
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ],
+        "custom_vars": {
+            "field_of_view_deg": "[360.0, 30.0]",
+            "host_ip": "192.168.0.10",
+            "host_port": 2368,
+            "product_name": "Hesai Pandar64",
+            "serial_number": "PA643CCA53953CCB50"
+        },
+        "device_id": "PA643CCA53953CCB50",
+        "distance_accuracy_meter": "nan",
+        "distance_max_meter": "nan",
+        "extrinsic_error": -1,
+        "horizontal_resolution_deg": "nan",
+        "label": "M_LIDAR_M",
+        "laser_count": -1,
+        "lidar_type": "",
+        "pos_meter": [
+            1.1574000120162964,
+            0.0013000000035390258,
+            1.6822999715805054
+        ],
+        "rpm": "nan",
+        "sensor_type": "lidar",
+        "uri": "192.168.0.201",
+        "vertical_fov_max_deg": "nan",
+        "vertical_fov_min_deg": "nan",
+        "yaw_pitch_roll_deg": [
+            -178.67,
+            0.206,
+            0.26
+        ]
+    },
+    "novatel": {
+        "custom_vars": {
+            "device_description": "NovAtel Inc. NovAtel GPS Receiver|NovAtel USB Virtual Serial Port (COM17)",
+            "hardware_id": "USB VID:PID=09d7:0100|NOVATEL_USB_PORT",
+            "host_port_name": "ICOM2",
+            "ip_address": "192.168.1.99",
+            "ip_port_number": 3002,
+            "ip_protocol": "UDP",
+            "serial_baud_rate": 460800
+        },
+        "device_id": "DMMU19110216C",
+        "extrinsic_error": -1,
+        "label": "novatel",
+        "pos_meter": [
+            0,
+            0,
+            0
+        ],
+        "sensor_type": "gps_ins",
+        "uri": "novatel:?baud=115200",
+        "yaw_pitch_roll_deg": [
+            0,
+            0,
+            0
+        ]
+    },
+    "ublox_gps": {
+        "custom_vars": {
+            "pos_meter": "[0.0, 0.0, 0.0]",
+            "product_name": "ublox EVK-F9K"
+        },
+        "device_id": "yoda_ubx_f9k",
+        "extrinsic_error": -1,
+        "label": "ublox_gps",
+        "pos_meter": [
+            0,
+            0,
+            0
+        ],
+        "sensor_type": "gps_ins",
+        "uri": "ublox:/dev/ttyTHS1?baud=115200&ubx=NAV-PVT",
+        "yaw_pitch_roll_deg": [
+            0,
+            0,
+            0
+        ]
+    }
+}

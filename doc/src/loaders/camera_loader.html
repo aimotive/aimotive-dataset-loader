@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>src.loaders.camera_loader API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.loaders.camera_loader</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import json
+import os
+from typing import Dict, Tuple, List
+
+import cv2
+import numpy as np
+
+from src.camera_params import CameraParams
+
+CAMERA_MAPPING = {
+    &#39;FrontCenter&#39;: &#39;F_STEREO_L&#39;,
+    &#39;F_STEREO_L&#39;: &#39;F_STEREO_L&#39;,
+    &#39;F_MIDLONGRANGECAM_CL&#39;: &#39;F_STEREO_L&#39;,
+    &#39;B_MIDRANGECAM_C&#39;: &#39;B_MIDRANGECAM_C&#39;,
+    &#39;M_FISHEYE_L&#39;: &#39;M_FISHEYE_L&#39;,
+    &#39;M_FISHEYE_R&#39;: &#39;M_FISHEYE_R&#39;,
+}
+
+
+class CameraData:
+    &#34;&#34;&#34; Stores the CameraDataItem for each camera.
+
+    Attributes
+        front_camera: image and camera parameters for the front camera.
+        back_camera: image and camera parameters for the back camera.
+        left_camera: image and camera parameters for the left camera.
+        right_camera: image and camera parameters for the right camera.
+    &#34;&#34;&#34;
+
+    def __init__(self, front_img: np.array, back_img: np.array, left_img: np.array,
+                 right_img: np.array, camera_params_by_sensor: Dict[str, CameraParams]):
+        &#34;&#34;&#34;
+        Args:
+            front_img: front image as numpy array
+            back_img: back image as numpy array
+            left_img: left image as numpy array
+            right_img: right image as numpy array
+            camera_params_by_sensor: dict, key: sensor name, value: CameraParams
+        &#34;&#34;&#34;
+        self.front_camera = CameraDataItem(&#39;front_cam&#39;, front_img, camera_params_by_sensor[&#39;F_STEREO_L&#39;])
+        self.back_camera = CameraDataItem(&#39;back_cam&#39;, back_img, camera_params_by_sensor[&#39;B_MIDRANGECAM_C&#39;])
+        self.left_camera = CameraDataItem(&#39;left_cam&#39;, left_img, camera_params_by_sensor[&#39;M_FISHEYE_L&#39;])
+        self.right_camera = CameraDataItem(&#39;right_cam&#39;, right_img, camera_params_by_sensor[&#39;M_FISHEYE_R&#39;])
+
+        self.index = 0
+        self.items = [self.front_camera, self.back_camera, self.left_camera, self.right_camera]
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index == len(self.items):
+            self.index = 0
+            raise StopIteration
+
+        item = self.items[self.index]
+        self.index += 1
+
+        return item
+
+
+class CameraDataItem:
+    &#34;&#34;&#34;
+    Stores the image and camera parameters for a camera with a given frame id.
+
+    Attributes
+        name: camera name
+        image: images stored as a numpy array
+        camera_params: camera parameters for the given data item
+    &#34;&#34;&#34;
+
+    def __init__(self, name: str, image: np.array, camera_params: CameraParams):
+        &#34;&#34;&#34;
+        Args:
+            name: camera name
+            image: images stored as a numpy array
+            camera_params: camera parameters for the given data item
+        &#34;&#34;&#34;
+        self.name = name
+        self.image = image
+        self.camera_params = camera_params
+
+
+def load_camera_data(data_folder: str, frame_id: str) -&gt; CameraData:
+    &#34;&#34;&#34;
+    Loads data for each camera with a given frame id.
+
+    Args:
+        data_folder: the path of the sequence from where data is loaded
+        frame_id: id if the loadable camera data, e.g. 0033532
+
+    Returns:
+        camera_data: a CameraData instance with front, back, left, right image and camera parameters.
+    &#34;&#34;&#34;
+
+    front_cam_path, back_cam_path, left_cam_path, right_cam_path = get_camera_paths(data_folder, frame_id)
+    cali_path = os.path.join(data_folder, &#39;sensor&#39;, &#39;calibration&#39;)
+    camera_params_by_sensor = read_camera_params(cali_path)
+
+    front_img, back_img = cv2.imread(front_cam_path), cv2.imread(back_cam_path)
+    left_img, right_img = cv2.imread(left_cam_path), cv2.imread(right_cam_path)
+
+    camera_data = CameraData(front_img, back_img, left_img, right_img, camera_params_by_sensor)
+
+    return camera_data
+
+
+def get_camera_paths(data_folder: str, frame_id: str) -&gt; Tuple[str, str, str, str]:
+    &#34;&#34;&#34;
+    Collects the path of the image with a given frame id for each camera.
+
+    Args:
+        data_folder: the path of the sequence from where data is loaded
+        frame_id: id if the loadable camera data, e.g. 0033532
+
+    Returns:
+        a tuple with the path of the front, back, left, and right camera, respectively
+    &#34;&#34;&#34;
+    cam_base_path = os.path.join(data_folder, &#39;sensor&#39;, &#39;camera&#39;)
+    cam_names = os.listdir(cam_base_path)
+    front_cam_name = [cam_name for cam_name in cam_names if cam_name[0] == &#39;F&#39; and cam_name[-1] == &#39;L&#39;][0]
+    front_cam_path = os.path.join(cam_base_path, front_cam_name, front_cam_name + &#34;_&#34; + frame_id + &#39;.jpg&#39;)
+    back_cam_path = os.path.join(cam_base_path, &#39;B_MIDRANGECAM_C&#39;, &#39;B_MIDRANGECAM_C_&#39; + frame_id + &#39;.jpg&#39;)
+    left_cam_path = os.path.join(cam_base_path, &#39;M_FISHEYE_L&#39;, &#39;M_FISHEYE_L_&#39; + frame_id + &#39;.jpg&#39;)
+    right_cam_path = os.path.join(cam_base_path, &#39;M_FISHEYE_R&#39;, &#39;M_FISHEYE_R_&#39; + frame_id + &#39;.jpg&#39;)
+
+    return front_cam_path, back_cam_path, left_cam_path, right_cam_path
+
+
+def read_camera_params(path: str) -&gt; Dict[str, Dict]:
+    &#34;&#34;&#34;
+    Reads camera parameters from the calibration json file
+
+    Args:
+        path: the path of the folder where calibration file is stored
+
+    Raises:
+        JSONDecodeError: error during camera parameters file loading
+
+    Returns:
+        a dict with camera names as keys and a dict with keys intrinsic, extrinsic, dist, model, and xi.
+    &#34;&#34;&#34;
+    cali_json_path = os.path.join(path, &#39;calibration.json&#39;)
+    if os.path.exists(cali_json_path):
+        with open(cali_json_path, &#39;r&#39;) as stream:
+            try:
+                camera_params_json = json.load(stream)
+            except json.decoder.JSONDecodeError:
+                print(f&#34;Failed to load: {cali_json_path}&#34;)
+
+        camera_params_by_sensor = {}
+        for sensor, params in camera_params_json.items():
+            if sensor in CAMERA_MAPPING and &#39;RT_sensor_from_body&#39; in params:
+                model = params[&#39;model&#39;]
+                intrinsic, _ = get_intrinsics(params[&#39;focal_length_px&#39;], params[&#39;principal_point_px&#39;])
+                extrinsic = np.array(params[f&#39;RT_sensor_from_body&#39;])
+                dist = np.array(params[&#39;distortion_coeffs&#39;]) if &#39;distortion_coeffs&#39; in params else np.array([0., 0., 0., 0., 0.])
+                camera_params = CameraParams(intrinsic, extrinsic, dist, model)
+                if &#39;FISHEYE&#39; in sensor and model == &#39;mei&#39;:
+                    camera_params.xi = params[&#39;xi&#39;]
+                camera_params_by_sensor[CAMERA_MAPPING[sensor]] = camera_params
+
+    return camera_params_by_sensor
+
+
+def get_intrinsics(focal_length: List[float], principal_point: List[float]) -&gt; Tuple[np.array, np.array]:
+    &#34;&#34;&#34;
+
+    Args:
+        focal_length: list of focal length [f_x, f_y]
+        principal_point: list of principal point [p_x, p_y]
+
+    Returns:
+        ray to image (i.e. intrinsic, shape: [3, 4]) and image to ray (shape: [3, 3] matrices
+    &#34;&#34;&#34;
+    f = focal_length
+    p = principal_point
+
+    ray_to_image = np.array([
+        [f[0], 0   , p[0], 0],
+        [0   , f[1], p[1], 0],
+        [0   , 0   , 1   , 0]
+    ])
+
+    image_to_ray = np.array([
+        [1 / f[0], 0       , -p[0] / f[0]],
+        [0       , 1 / f[1], -p[1] / f[1]],
+        [0       , 0       ,  1          ]
+    ])
+
+    return ray_to_image, image_to_ray</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="src.loaders.camera_loader.get_camera_paths"><code class="name flex">
+<span>def <span class="ident">get_camera_paths</span></span>(<span>data_folder: str, frame_id: str) ‑> Tuple[str, str, str, str]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Collects the path of the image with a given frame id for each camera.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>data_folder</code></strong></dt>
+<dd>the path of the sequence from where data is loaded</dd>
+<dt><strong><code>frame_id</code></strong></dt>
+<dd>id if the loadable camera data, e.g. 0033532</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>a tuple with the path of the front, back, left, and right camera, respectively</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_camera_paths(data_folder: str, frame_id: str) -&gt; Tuple[str, str, str, str]:
+    &#34;&#34;&#34;
+    Collects the path of the image with a given frame id for each camera.
+
+    Args:
+        data_folder: the path of the sequence from where data is loaded
+        frame_id: id if the loadable camera data, e.g. 0033532
+
+    Returns:
+        a tuple with the path of the front, back, left, and right camera, respectively
+    &#34;&#34;&#34;
+    cam_base_path = os.path.join(data_folder, &#39;sensor&#39;, &#39;camera&#39;)
+    cam_names = os.listdir(cam_base_path)
+    front_cam_name = [cam_name for cam_name in cam_names if cam_name[0] == &#39;F&#39; and cam_name[-1] == &#39;L&#39;][0]
+    front_cam_path = os.path.join(cam_base_path, front_cam_name, front_cam_name + &#34;_&#34; + frame_id + &#39;.jpg&#39;)
+    back_cam_path = os.path.join(cam_base_path, &#39;B_MIDRANGECAM_C&#39;, &#39;B_MIDRANGECAM_C_&#39; + frame_id + &#39;.jpg&#39;)
+    left_cam_path = os.path.join(cam_base_path, &#39;M_FISHEYE_L&#39;, &#39;M_FISHEYE_L_&#39; + frame_id + &#39;.jpg&#39;)
+    right_cam_path = os.path.join(cam_base_path, &#39;M_FISHEYE_R&#39;, &#39;M_FISHEYE_R_&#39; + frame_id + &#39;.jpg&#39;)
+
+    return front_cam_path, back_cam_path, left_cam_path, right_cam_path</code></pre>
+</details>
+</dd>
+<dt id="src.loaders.camera_loader.get_intrinsics"><code class="name flex">
+<span>def <span class="ident">get_intrinsics</span></span>(<span>focal_length: List[float], principal_point: List[float]) ‑> Tuple[<built-in function array>, <built-in function array>]</span>
+</code></dt>
+<dd>
+<div class="desc"><h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>focal_length</code></strong></dt>
+<dd>list of focal length [f_x, f_y]</dd>
+<dt><strong><code>principal_point</code></strong></dt>
+<dd>list of principal point [p_x, p_y]</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>ray to image (i.e. intrinsic, shape: [3, 4]) and image to ray (shape: [3, 3] matrices</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_intrinsics(focal_length: List[float], principal_point: List[float]) -&gt; Tuple[np.array, np.array]:
+    &#34;&#34;&#34;
+
+    Args:
+        focal_length: list of focal length [f_x, f_y]
+        principal_point: list of principal point [p_x, p_y]
+
+    Returns:
+        ray to image (i.e. intrinsic, shape: [3, 4]) and image to ray (shape: [3, 3] matrices
+    &#34;&#34;&#34;
+    f = focal_length
+    p = principal_point
+
+    ray_to_image = np.array([
+        [f[0], 0   , p[0], 0],
+        [0   , f[1], p[1], 0],
+        [0   , 0   , 1   , 0]
+    ])
+
+    image_to_ray = np.array([
+        [1 / f[0], 0       , -p[0] / f[0]],
+        [0       , 1 / f[1], -p[1] / f[1]],
+        [0       , 0       ,  1          ]
+    ])
+
+    return ray_to_image, image_to_ray</code></pre>
+</details>
+</dd>
+<dt id="src.loaders.camera_loader.load_camera_data"><code class="name flex">
+<span>def <span class="ident">load_camera_data</span></span>(<span>data_folder: str, frame_id: str) ‑> <a title="src.loaders.camera_loader.CameraData" href="#src.loaders.camera_loader.CameraData">CameraData</a></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Loads data for each camera with a given frame id.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>data_folder</code></strong></dt>
+<dd>the path of the sequence from where data is loaded</dd>
+<dt><strong><code>frame_id</code></strong></dt>
+<dd>id if the loadable camera data, e.g. 0033532</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>camera_data</code></dt>
+<dd>a CameraData instance with front, back, left, right image and camera parameters.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_camera_data(data_folder: str, frame_id: str) -&gt; CameraData:
+    &#34;&#34;&#34;
+    Loads data for each camera with a given frame id.
+
+    Args:
+        data_folder: the path of the sequence from where data is loaded
+        frame_id: id if the loadable camera data, e.g. 0033532
+
+    Returns:
+        camera_data: a CameraData instance with front, back, left, right image and camera parameters.
+    &#34;&#34;&#34;
+
+    front_cam_path, back_cam_path, left_cam_path, right_cam_path = get_camera_paths(data_folder, frame_id)
+    cali_path = os.path.join(data_folder, &#39;sensor&#39;, &#39;calibration&#39;)
+    camera_params_by_sensor = read_camera_params(cali_path)
+
+    front_img, back_img = cv2.imread(front_cam_path), cv2.imread(back_cam_path)
+    left_img, right_img = cv2.imread(left_cam_path), cv2.imread(right_cam_path)
+
+    camera_data = CameraData(front_img, back_img, left_img, right_img, camera_params_by_sensor)
+
+    return camera_data</code></pre>
+</details>
+</dd>
+<dt id="src.loaders.camera_loader.read_camera_params"><code class="name flex">
+<span>def <span class="ident">read_camera_params</span></span>(<span>path: str) ‑> Dict[str, Dict[~KT, ~VT]]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Reads camera parameters from the calibration json file</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>path</code></strong></dt>
+<dd>the path of the folder where calibration file is stored</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>JSONDecodeError</code></dt>
+<dd>error during camera parameters file loading</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>a dict with camera names as keys and a dict with keys intrinsic, extrinsic, dist, model, and xi.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_camera_params(path: str) -&gt; Dict[str, Dict]:
+    &#34;&#34;&#34;
+    Reads camera parameters from the calibration json file
+
+    Args:
+        path: the path of the folder where calibration file is stored
+
+    Raises:
+        JSONDecodeError: error during camera parameters file loading
+
+    Returns:
+        a dict with camera names as keys and a dict with keys intrinsic, extrinsic, dist, model, and xi.
+    &#34;&#34;&#34;
+    cali_json_path = os.path.join(path, &#39;calibration.json&#39;)
+    if os.path.exists(cali_json_path):
+        with open(cali_json_path, &#39;r&#39;) as stream:
+            try:
+                camera_params_json = json.load(stream)
+            except json.decoder.JSONDecodeError:
+                print(f&#34;Failed to load: {cali_json_path}&#34;)
+
+        camera_params_by_sensor = {}
+        for sensor, params in camera_params_json.items():
+            if sensor in CAMERA_MAPPING and &#39;RT_sensor_from_body&#39; in params:
+                model = params[&#39;model&#39;]
+                intrinsic, _ = get_intrinsics(params[&#39;focal_length_px&#39;], params[&#39;principal_point_px&#39;])
+                extrinsic = np.array(params[f&#39;RT_sensor_from_body&#39;])
+                dist = np.array(params[&#39;distortion_coeffs&#39;]) if &#39;distortion_coeffs&#39; in params else np.array([0., 0., 0., 0., 0.])
+                camera_params = CameraParams(intrinsic, extrinsic, dist, model)
+                if &#39;FISHEYE&#39; in sensor and model == &#39;mei&#39;:
+                    camera_params.xi = params[&#39;xi&#39;]
+                camera_params_by_sensor[CAMERA_MAPPING[sensor]] = camera_params
+
+    return camera_params_by_sensor</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="src.loaders.camera_loader.CameraData"><code class="flex name class">
+<span>class <span class="ident">CameraData</span></span>
+<span>(</span><span>front_img: <built-in function array>, back_img: <built-in function array>, left_img: <built-in function array>, right_img: <built-in function array>, camera_params_by_sensor: Dict[str, <a title="src.camera_params.CameraParams" href="../camera_params.html#src.camera_params.CameraParams">CameraParams</a>])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Stores the CameraDataItem for each camera.</p>
+<p>Attributes
+front_camera: image and camera parameters for the front camera.
+back_camera: image and camera parameters for the back camera.
+left_camera: image and camera parameters for the left camera.
+right_camera: image and camera parameters for the right camera.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>front_img</code></strong></dt>
+<dd>front image as numpy array</dd>
+<dt><strong><code>back_img</code></strong></dt>
+<dd>back image as numpy array</dd>
+<dt><strong><code>left_img</code></strong></dt>
+<dd>left image as numpy array</dd>
+<dt><strong><code>right_img</code></strong></dt>
+<dd>right image as numpy array</dd>
+<dt><strong><code>camera_params_by_sensor</code></strong></dt>
+<dd>dict, key: sensor name, value: CameraParams</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class CameraData:
+    &#34;&#34;&#34; Stores the CameraDataItem for each camera.
+
+    Attributes
+        front_camera: image and camera parameters for the front camera.
+        back_camera: image and camera parameters for the back camera.
+        left_camera: image and camera parameters for the left camera.
+        right_camera: image and camera parameters for the right camera.
+    &#34;&#34;&#34;
+
+    def __init__(self, front_img: np.array, back_img: np.array, left_img: np.array,
+                 right_img: np.array, camera_params_by_sensor: Dict[str, CameraParams]):
+        &#34;&#34;&#34;
+        Args:
+            front_img: front image as numpy array
+            back_img: back image as numpy array
+            left_img: left image as numpy array
+            right_img: right image as numpy array
+            camera_params_by_sensor: dict, key: sensor name, value: CameraParams
+        &#34;&#34;&#34;
+        self.front_camera = CameraDataItem(&#39;front_cam&#39;, front_img, camera_params_by_sensor[&#39;F_STEREO_L&#39;])
+        self.back_camera = CameraDataItem(&#39;back_cam&#39;, back_img, camera_params_by_sensor[&#39;B_MIDRANGECAM_C&#39;])
+        self.left_camera = CameraDataItem(&#39;left_cam&#39;, left_img, camera_params_by_sensor[&#39;M_FISHEYE_L&#39;])
+        self.right_camera = CameraDataItem(&#39;right_cam&#39;, right_img, camera_params_by_sensor[&#39;M_FISHEYE_R&#39;])
+
+        self.index = 0
+        self.items = [self.front_camera, self.back_camera, self.left_camera, self.right_camera]
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index == len(self.items):
+            self.index = 0
+            raise StopIteration
+
+        item = self.items[self.index]
+        self.index += 1
+
+        return item</code></pre>
+</details>
+</dd>
+<dt id="src.loaders.camera_loader.CameraDataItem"><code class="flex name class">
+<span>class <span class="ident">CameraDataItem</span></span>
+<span>(</span><span>name: str, image: <built-in function array>, camera_params: <a title="src.camera_params.CameraParams" href="../camera_params.html#src.camera_params.CameraParams">CameraParams</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Stores the image and camera parameters for a camera with a given frame id.</p>
+<p>Attributes
+name: camera name
+image: images stored as a numpy array
+camera_params: camera parameters for the given data item</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>name</code></strong></dt>
+<dd>camera name</dd>
+<dt><strong><code>image</code></strong></dt>
+<dd>images stored as a numpy array</dd>
+<dt><strong><code>camera_params</code></strong></dt>
+<dd>camera parameters for the given data item</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class CameraDataItem:
+    &#34;&#34;&#34;
+    Stores the image and camera parameters for a camera with a given frame id.
+
+    Attributes
+        name: camera name
+        image: images stored as a numpy array
+        camera_params: camera parameters for the given data item
+    &#34;&#34;&#34;
+
+    def __init__(self, name: str, image: np.array, camera_params: CameraParams):
+        &#34;&#34;&#34;
+        Args:
+            name: camera name
+            image: images stored as a numpy array
+            camera_params: camera parameters for the given data item
+        &#34;&#34;&#34;
+        self.name = name
+        self.image = image
+        self.camera_params = camera_params</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src.loaders" href="index.html">src.loaders</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="src.loaders.camera_loader.get_camera_paths" href="#src.loaders.camera_loader.get_camera_paths">get_camera_paths</a></code></li>
+<li><code><a title="src.loaders.camera_loader.get_intrinsics" href="#src.loaders.camera_loader.get_intrinsics">get_intrinsics</a></code></li>
+<li><code><a title="src.loaders.camera_loader.load_camera_data" href="#src.loaders.camera_loader.load_camera_data">load_camera_data</a></code></li>
+<li><code><a title="src.loaders.camera_loader.read_camera_params" href="#src.loaders.camera_loader.read_camera_params">read_camera_params</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="src.loaders.camera_loader.CameraData" href="#src.loaders.camera_loader.CameraData">CameraData</a></code></h4>
+</li>
+<li>
+<h4><code><a title="src.loaders.camera_loader.CameraDataItem" href="#src.loaders.camera_loader.CameraDataItem">CameraDataItem</a></code></h4>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
