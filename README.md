@@ -1,4 +1,8 @@
-# aiMotive Multimodal Dataset
+# aiMotive Multimodal Dataset Loader
+
+## Download
+The dataset can be downloaded from this URL:
+https://aimotive-dataset.s3.eu-central-1.amazonaws.com/aimotive-dataset.zip
 
 ## Installation
 The repository has been tested on Ubuntu with Python 3.8. Currently no Windows support is available.
