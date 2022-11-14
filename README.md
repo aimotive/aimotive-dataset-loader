@@ -1,8 +1,7 @@
 # aiMotive Multimodal Dataset Loader
 
 ## Download
-The dataset can be downloaded from this URL:
-https://aimotive-dataset.s3.eu-central-1.amazonaws.com/aimotive-dataset.zip
+The dataset can be downloaded from this [repository](https://github.com/aimotive/aimotive_dataset).
 
 ## Installation
 The repository has been tested on Ubuntu with Python 3.8. Currently no Windows support is available.
@@ -41,4 +40,16 @@ pip install torch==1.9.0+cu102 torchvision==0.10.0+cu102 -f https://download.pyt
 #### Run script
 ```
 PYTHONPATH=$PYTHONPATH: python examples/pytorch_loader.py
+```
+
+## Cite our work
+If you use this code or aiMotive Multimodal Dataset in your research, please cite our work by using the following BibTeX entry:
+
+```latex
+ @article{matuszka2022aimotivedataset,
+  title={aiMotive Dataset: A Multimodal Dataset for Robust Autonomous Driving with Long-Range Perception},
+  author={Matuszka, Tamás and Németh, Gabor and Varga, Bálint and Kunsági-Máté, Sándor and Barton, Iván and Hajas, Péter and Szeghy, Dávid and Pető, Levente},
+  journal={arXiv preprint arXiv:XXXXXXXX},
+  year={2022}
+}
 ```
