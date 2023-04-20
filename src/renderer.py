@@ -378,12 +378,12 @@ class Renderer:
 
         if camera_params.camera_model == 'mei':
             projected_lines = self.mei_camera_to_image(ray=all_lines.T, camera_params=camera_params).T
-            projected_lines = projected_lines.reshape(-1, 4).astype(np.int)
+            projected_lines = projected_lines.reshape(-1, 4).astype(np.int32)
             # Filter out of bounds lines.
             projected_lines = projected_lines[
                 np.max(projected_lines >= 0, axis=1) & (projected_lines[:, 0] < w) | (projected_lines[:, 1] < h) | (
                         projected_lines[:, 2] < w) | (projected_lines[:, 3] < h)]
-            projected_lines = projected_lines.reshape(-1, 2, 2).astype(np.int)
+            projected_lines = projected_lines.reshape(-1, 2, 2).astype(np.int32)
         else:
             projected_lines = self.pinhole_camera_to_image(ray=all_lines.T, camera_params=camera_params).T
 
@@ -403,7 +403,7 @@ class Renderer:
             line_projectable = np.min(dot, axis=-1) > 0.999
             projected_lines = projected_lines[line_projectable]
 
-        cv2.polylines(img, projected_lines.astype(np.int), isClosed=False, color=color, thickness=thickness)
+        cv2.polylines(img, projected_lines.astype(np.int32), isClosed=False, color=color, thickness=thickness)
 
         return img
 
